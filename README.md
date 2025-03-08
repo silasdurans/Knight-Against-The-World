@@ -12,12 +12,6 @@
   <p>Explore, colabore e divirta-se! 😄</p>
 </div>
 
-## 📖 Índice
-
-- [Visão Geral](#visão-geral)
-- [Tecnologias](#tecnologias)
-- [Configuração do Ambiente](#configuração-do-ambiente)
-
 ## 🔭 Visão Geral
 
 O projeto é um jogo single player, o jogador tem o objetivo de manter-se vivo e coletar todas as moedas da fase, mantenha distância de poços e inimigos e você irá se dar bem. O jogo foi desenvolvido em uma tarde e as incrementações ao longo de uma semana.
