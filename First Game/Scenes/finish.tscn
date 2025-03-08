@@ -1,0 +1,122 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtkeb5vri0jim"]
+
+[ext_resource type="Texture2D" uid="uid://vdeann4c7ggb" path="res://Assets/menu/bg-menu.jpg" id="1_8xop3"]
+[ext_resource type="Script" path="res://finish.gd" id="1_hg3iy"]
+[ext_resource type="FontFile" uid="uid://vri60sjd071c" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_hrqab"]
+[ext_resource type="Texture2D" uid="uid://ddkr8t0tba33h" path="res://Assets/menu/Knight-removebg-preview.png" id="4_38tty"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iml6n"]
+texture = ExtResource("1_8xop3")
+modulate_color = Color(0.337255, 0.337255, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5318"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_punty"]
+bg_color = Color(0.764706, 0.764706, 0.764706, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvohv"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyqfk"]
+
+[node name="Finish" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hg3iy")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iml6n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.0
+offset_top = -93.0
+offset_right = 161.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hrqab")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_p5318")
+theme_override_styles/hover = SubResource("StyleBoxFlat_punty")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kvohv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yyqfk")
+text = "PLAY AGAIN"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hrqab")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_p5318")
+theme_override_styles/hover = SubResource("StyleBoxFlat_punty")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kvohv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yyqfk")
+text = "EXIT"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -434.0
+offset_right = 250.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_38tty")
+expand_mode = 1
+stretch_mode = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
